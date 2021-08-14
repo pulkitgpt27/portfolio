@@ -2,8 +2,12 @@ import React, { useState, useEffect, lazy, Suspense } from "react";
 import Header from "../components/Header/Header";
 import { StyleProvider } from "../contexts/StyleContext";
 import Loading from "../components/Loading/Loading";
+import LazyLoad from "../components/LazyLoad/LazyLoad";
 const Greeting = lazy(() => import("../components/Greeting/Greeting"));
 const Skills = lazy(() => import("../components/Skills/Skills"));
+const SkillProgress = lazy(() =>
+  import("../components/SkillProgress/SkillProgress")
+);
 import "./Main.scss";
 
 const Main: React.FC = () => {
@@ -31,9 +35,16 @@ const Main: React.FC = () => {
       <div className={isDark ? "dark-mode" : ""}>
         <StyleProvider value={{ isDark, changeTheme }}>
           <Header />
-          <Greeting />
-          <Skills />
-          {/* <Greeting />
+          <LazyLoad>
+            <Greeting />
+          </LazyLoad>
+          <LazyLoad>
+            <Skills />
+          </LazyLoad>
+          <LazyLoad>
+            <SkillProgress />
+          </LazyLoad>
+          {/*
           <StackProgress />
           <Education />
           <WorkExperience />
