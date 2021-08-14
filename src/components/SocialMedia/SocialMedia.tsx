@@ -2,7 +2,7 @@ import React from "react";
 import "./SocialMedia.scss";
 import { socialMediaLinks } from "../../config/strings";
 
-export default function SocialMedia() {
+const SocialMedia: React.FC = () => {
   if (!socialMediaLinks.display) {
     return null;
   }
@@ -44,7 +44,7 @@ export default function SocialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.gitlab ? (
+      {/* {socialMediaLinks.gitlab && (
         <a
           href={socialMediaLinks.gitlab}
           className="icon-button gitlab"
@@ -54,7 +54,7 @@ export default function SocialMedia() {
           <i className="fab fa-gitlab" />
           <span />
         </a>
-      ) : null}
+      )} */}
 
       {socialMediaLinks.facebook ? (
         <a
@@ -92,7 +92,7 @@ export default function SocialMedia() {
         </a>
       ) : null} */}
 
-      {socialMediaLinks.medium ? (
+      {/* {socialMediaLinks.medium ? (
         <a
           href={socialMediaLinks.medium}
           className="icon-button medium"
@@ -102,7 +102,7 @@ export default function SocialMedia() {
           <i className="fab fa-medium" />
           <span />
         </a>
-      ) : null}
+      ) : null} */}
 
       {socialMediaLinks.stackoverflow ? (
         <a
@@ -118,3 +118,4 @@ export default function SocialMedia() {
     </div>
   );
 }
+export default SocialMedia;

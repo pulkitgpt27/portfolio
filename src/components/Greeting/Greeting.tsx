@@ -1,8 +1,7 @@
-import React, { lazy, useContext } from "react";
+import React, { useContext } from "react";
 import { Fade } from "react-awesome-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
-// const NoMatch = lazy(() => import('./pages/NoMatch/NoMatch'));
 import landingPerson from "../../assets/lottie/landingPerson.json";
 
 import manOnTable from "../../assets/images/manOnTable.svg";
@@ -12,7 +11,7 @@ import Button from "../Button/Button";
 import { illustration, greeting } from "../../config/strings";
 import StyleContext from "../../contexts/StyleContext";
 
-export default function Greeting() {
+const Greeting: React.FC = () => {
   const { isDark } = useContext(StyleContext);
   if (!greeting.displayGreeting) {
     return null;
@@ -62,3 +61,5 @@ export default function Greeting() {
     </Fade>
   );
 }
+
+export default Greeting

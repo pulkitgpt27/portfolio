@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import Header from "../components/Header/Header";
 import { StyleProvider } from "../contexts/StyleContext";
-import Greeting from "../components/Greeting/Greeting";
+import Loading from "../components/Loading/Loading";
+const Greeting = lazy(() => import("../components/Greeting/Greeting"));
+const Skills = lazy(() => import("../components/Skills/Skills"));
 import "./Main.scss";
 
-const Main = () => {
+const Main: React.FC = () => {
   const [isDark, setDark] = useState(
     !!JSON.parse(`${localStorage.getItem("isDark")}`) || false
   );
@@ -25,27 +27,29 @@ const Main = () => {
   };
 
   return (
-    <div className={isDark ? "dark-mode" : ""}>
-      <StyleProvider value={{ isDark, changeTheme }}>
-        <Header />
-        <Greeting />
-        {/* <Greeting />
-        <Skills />
-        <StackProgress />
-        <Education />
-        <WorkExperience />
-        <Projects />
-        <StartupProject />
-        <Achievement />
-        <Blogs />
-        <Talks />
-        <Twitter />
-        <Podcast />
-        <Profile />
-        <Footer />
-        <Top /> */}
-      </StyleProvider>
-    </div>
+    <Suspense fallback={<Loading />}>
+      <div className={isDark ? "dark-mode" : ""}>
+        <StyleProvider value={{ isDark, changeTheme }}>
+          <Header />
+          <Greeting />
+          <Skills />
+          {/* <Greeting />
+          <StackProgress />
+          <Education />
+          <WorkExperience />
+          <Projects />
+          <StartupProject />
+          <Achievement />
+          <Blogs />
+          <Talks />
+          <Twitter />
+          <Podcast />
+          <Profile />
+          <Footer />
+          <Top /> */}
+        </StyleProvider>
+      </div>
+    </Suspense>
   );
 };
 
