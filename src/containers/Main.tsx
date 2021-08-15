@@ -5,6 +5,8 @@ import Loading from "../components/Loading/Loading";
 import LazyLoad from "../components/LazyLoad/LazyLoad";
 const Greeting = lazy(() => import("../components/Greeting/Greeting"));
 const Skills = lazy(() => import("../components/Skills/Skills"));
+const Education = lazy(() => import("../components/Education/Education"));
+const WorkExperience = lazy(() => import("./WorkExperience/WorkExperience"));
 const SkillProgress = lazy(() =>
   import("../components/SkillProgress/SkillProgress")
 );
@@ -44,9 +46,13 @@ const Main: React.FC = () => {
           <LazyLoad>
             <SkillProgress />
           </LazyLoad>
+          <LazyLoad>
+            <Education />
+          </LazyLoad>
+          <LazyLoad>
+            <WorkExperience />
+          </LazyLoad>
           {/*
-          <StackProgress />
-          <Education />
           <WorkExperience />
           <Projects />
           <StartupProject />

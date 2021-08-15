@@ -4,7 +4,10 @@
 
 // Summary And Greeting Section
 import emoji from "react-easy-emoji";
+import ipu1 from "../assets/images/ipu1.png";
+import rosary from "../assets/images/rosary.png";
 import logo from "../../src/logo.svg";
+import navyug from "../assets/images/navyug.png";
 
 const illustration = {
   animated: true // set to false to use static SVG
@@ -103,24 +106,20 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo,
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      schoolName: "BPIT (IP University)",
+      logo: ipu1,
+      subHeader: "Bachelor of technology in Computer Science",
+      duration: "Aug 2014 - July 2018",
+      desc: "Percentage: 85%",
+      descBullets: []
     },
     {
-      schoolName: "Stanford University",
-      logo,
+      schoolName: "Rosary Sen Secondary School",
+      logo: rosary,
       subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc:
-        "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      duration: "2012 - 2014",
+      desc: "Percentage: 95%",
+      descBullets: []
     }
   ]
 };
@@ -153,31 +152,32 @@ const workExperiences = {
   experience: [
     {
       role: "Software Engineer",
-      company: "Facebook",
-      companylogo: logo,
+      company: "Navyug",
+      companylogo: navyug,
+      rgbColor: ["45", "86", "171"],
       date: "June 2018 – Present",
       desc:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Reponsible for creating optimized and responsive web apps and PWA's as well as wrap it to Android/IOS/Ubuntu app",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Managed a team of 3 developers to deliver a military project before time",
+        "Constant client interactions, Suggesting them the best solutions to a problem",
+        "Optimized Frontend/Backend/Network of a project",
+        "Implement Elasticsearch to reduce search query time by 50%"
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: logo,
-      date: "May 2017 – May 2018",
-      desc:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
       role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: logo,
-      date: "Jan 2015 – Sep 2015",
+      company: "Navyug",
+      companylogo: navyug,
+      rgbColor: ["45", "86", "171"],
+      date: "Jun 2017 – Dec 2017",
       desc:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "Quickly learnt EmberJS and Ruby to develop features on companies product",
+      descBullets: [
+        "Learning the whole stack HTML/CSS/JavaScript/EmberJS/RoR",
+        "Drawable Canvas for SME's to check marksheets",
+        "Saving those marksheets in png form and render to frontend"
+      ]
     }
   ]
 };

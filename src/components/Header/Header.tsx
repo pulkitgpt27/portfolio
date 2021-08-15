@@ -13,7 +13,7 @@ import {
   achievementSection
 } from "../../config/strings";
 
-function Header() {
+const Header: React.FC = () => {
   const { isDark } = useContext(StyleContext);
   const viewExperience = workExperiences.display;
   const viewOpenSource = openSource.display;
@@ -81,5 +81,6 @@ function Header() {
       </header>
     </Headroom>
   );
-}
+};
+
 export default Header;
