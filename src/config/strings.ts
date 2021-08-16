@@ -8,6 +8,9 @@ import ipu1 from "../assets/images/ipu1.png";
 import rosary from "../assets/images/rosary.png";
 import logo from "../../src/logo.svg";
 import navyug from "../assets/images/navyug.png";
+import abh2 from "../assets/images/ABH2.jpeg";
+import kapalya from "../assets/images/kapalya.png";
+import doprep from "../assets/images/doprep.png";
 
 const illustration = {
   animated: true // set to false to use static SVG
@@ -193,29 +196,40 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
+  title: "Big Projects 🚀",
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
   projects: [
     {
-      image: logo,
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: abh2,
+      projectName: "A Billion Hopes",
+      projectDesc: "Crowd Funding Platform",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://saayahealth.com/"
+          url: "https://abillionhopes.com/"
         }
         //  you can add extra buttons here.
       ]
     },
     {
-      image: logo,
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: kapalya,
+      projectName: "Kapalya",
+      projectDesc: "Encryption Management Platform",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://nextu.se/"
+          url: "https://www.kapalya.com/"
+        }
+      ]
+    },
+    {
+      image: doprep,
+      projectName: "DoPrep",
+      projectDesc: "Students Preparation Platform",
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "https://doprep.com/"
         }
       ]
     }

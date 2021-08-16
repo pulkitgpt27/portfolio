@@ -27,7 +27,7 @@ const Greeting: React.FC = () => {
               >
                 {" "}
                 {greeting.title}{" "}
-                <span className="wave-emoji">{emoji("👋")}</span>
+                <span className="wave-emoji">{"👋"}</span>
               </h1>
               <p
                 className={
