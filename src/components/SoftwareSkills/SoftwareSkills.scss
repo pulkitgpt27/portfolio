@@ -1,11 +1,16 @@
 @import "../../_globalColor";
 
 .dev-icons {
-  padding-left: 0;
+  padding: 0px 30px;
   list-style: none;
   font-size: 3rem;
   margin-bottom: 0px;
   margin-top: 0px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 0px;
+  }
 }
 
 .software-skill-inline {
@@ -22,9 +27,13 @@
   color: $skillsColor;
 }
 
+.software-skill-inline>p:hover {
+  color: $skillsColor;
+}
+
 .software-skill-inline>p {
   color: $subTitle;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .software-skill-inline>i:hover~p {
