@@ -15,7 +15,7 @@ const Greeting: React.FC = () => {
     return null;
   }
   return (
-    <Fade duration={1000}>
+    <Fade triggerOnce duration={1000}>
       <div className="greet-main" id="greeting">
         <div className="greeting-main">
           <div className="greeting-text-div">

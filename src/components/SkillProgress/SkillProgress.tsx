@@ -9,7 +9,7 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 const SkillProgress: React.FC = () => {
   if (techStack.viewSkillBars) {
     return (
-      <Bounce duration={1000}>
+      <Bounce triggerOnce duration={1000}>
         <div className="skills-container">
           <div className="skills-bar">
             <h1 className="skills-heading">Proficiency</h1>

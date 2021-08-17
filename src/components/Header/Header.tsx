@@ -3,6 +3,7 @@ import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
+import { Fade } from "react-awesome-reveal";
 import {
   greeting,
   workExperiences,
@@ -21,9 +22,20 @@ const Header: React.FC = () => {
   const viewAchievement = achievementSection.display;
   const viewBlog = blogSection.display;
   const viewTalks = talkSection.display;
-
+  const [count, setCount] = React.useState(0);
+  const [view, setView] = React.useState(false);
+  const remount = (inView: boolean, entry: IntersectionObserverEntry) => {
+    if (!inView && view) {
+      console.log("called");
+      setView(false);
+      setCount(count + 1);
+    }
+    if (inView && !view) {
+      setView(inView);
+    }
+  };
   return (
-    <Headroom>
+    <Headroom key={`${count}`}>
       <header className={isDark ? "dark-menu header" : "header"}>
         <a href="/" className="logo">
           <span className="grey-color"> &lt;</span>
@@ -73,9 +85,11 @@ const Header: React.FC = () => {
             <a href="#contact">Contact Me</a>
           </li>
           <li>
-            <a>
-              <ToggleSwitch />
-            </a>
+            <Fade duration={0} onVisibilityChange={remount}>
+              <a>
+                <ToggleSwitch />
+              </a>
+            </Fade>
           </li>
         </ul>
       </header>

@@ -10,6 +10,7 @@ import logo from "../../src/logo.svg";
 import navyug from "../assets/images/navyug.png";
 import abh2 from "../assets/images/ABH2.jpeg";
 import kapalya from "../assets/images/kapalya.png";
+import kapalyagif from "../assets/images/kapalya.gif";
 import doprep from "../assets/images/doprep.png";
 
 const illustration = {
@@ -202,6 +203,7 @@ const bigProjects = {
       image: abh2,
       projectName: "A Billion Hopes",
       projectDesc: "Crowd Funding Platform",
+      url: "https://abillionhopes.com/",
       footerLink: [
         {
           name: "Visit Website",
@@ -214,6 +216,7 @@ const bigProjects = {
       image: kapalya,
       projectName: "Kapalya",
       projectDesc: "Encryption Management Platform",
+      url: "https://www.kapalya.com/",
       footerLink: [
         {
           name: "Visit Website",
@@ -225,6 +228,7 @@ const bigProjects = {
       image: doprep,
       projectName: "DoPrep",
       projectDesc: "Students Preparation Platform",
+      url: "https://doprep.com/",
       footerLink: [
         {
           name: "Visit Website",
@@ -356,8 +360,8 @@ const podcastSection = {
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-3243454077",
+    "Discuss a project or just want to say hi. Want to create your portfolio? My Inbox is open for all",
+  number: "+91-8527213450",
   email_address: "pulkitgpt27@gmail.com"
 };
 

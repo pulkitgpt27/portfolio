@@ -2,13 +2,14 @@ import React, { useState, useEffect, lazy, Suspense } from "react";
 import Header from "../components/Header/Header";
 import { StyleProvider } from "../contexts/StyleContext";
 import Loading from "../components/Loading/Loading";
-import LazyLoad from "../components/LazyLoad/LazyLoad";
 const Greeting = lazy(() => import("../components/Greeting/Greeting"));
 const Skills = lazy(() => import("../components/Skills/Skills"));
+const Contact = lazy(() => import("./Contact/Contact"));
 const Education = lazy(() => import("../components/Education/Education"));
 const WorkExperience = lazy(() => import("./WorkExperience/WorkExperience"));
 const StartupProjects = lazy(() => import("./StartupProjects/StartupProjects"));
 const Top = lazy(() => import("../components/Top/Top"));
+const Footer = lazy(() => import("../components/Footer/Footer"));
 const SkillProgress = lazy(() =>
   import("../components/SkillProgress/SkillProgress")
 );
@@ -39,25 +40,15 @@ const Main: React.FC = () => {
       <div className={isDark ? "dark-mode" : ""}>
         <StyleProvider value={{ isDark, changeTheme }}>
           <Header />
-          <LazyLoad>
-            <Greeting />
-          </LazyLoad>
-          <LazyLoad>
-            <Skills />
-          </LazyLoad>
-          <LazyLoad>
-            <SkillProgress />
-          </LazyLoad>
-          <LazyLoad>
-            <Education />
-          </LazyLoad>
-          <LazyLoad>
-            <WorkExperience />
-          </LazyLoad>
-          <LazyLoad>
-            <StartupProjects />
-          </LazyLoad>
+          <Greeting />
+          <Skills />
+          <SkillProgress />
+          <Education />
+          <WorkExperience />
+          <StartupProjects />
+          <Footer />
           <Top />
+          <Contact />
           {/* <LazyLoad>
             <Projects />
           </LazyLoad> */}
@@ -68,7 +59,6 @@ const Main: React.FC = () => {
           <Twitter />
           <Podcast />
           <Profile />
-          <Footer />
           <Top /> */}
         </StyleProvider>
       </div>

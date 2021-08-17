@@ -15,7 +15,7 @@ const Skills: React.FC = () => {
   return (
     <div className={isDark ? "dark-mode main" : "main"} id="skills">
       <div className="skills-main-div">
-        <Fade direction="left" duration={1000}>
+        <Fade triggerOnce direction="left" duration={1000}>
           <div className="skills-image-div">
             {illustration.animated ? (
               <DisplayLottie animationData={codingPerson} />
@@ -27,7 +27,7 @@ const Skills: React.FC = () => {
             )}
           </div>
         </Fade>
-        <Fade direction={"right"} duration={1000}>
+        <Fade triggerOnce direction={"right"} duration={1000}>
           <div className="skills-text-div">
             <h1
               className={isDark ? "dark-mode skills-heading" : "skills-heading"}

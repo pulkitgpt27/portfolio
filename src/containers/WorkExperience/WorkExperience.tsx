@@ -10,7 +10,7 @@ const WorkExperience: React.FC = () => {
   if (workExperiences.display) {
     return (
       <div id="experience">
-        <Fade direction="right" duration={1000}>
+        <Fade triggerOnce direction="right" duration={1000}>
           <div className="experience-container" id="workExperience">
             <div>
               <h1 className="experience-heading">Experiences</h1>

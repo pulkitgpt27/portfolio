@@ -29,7 +29,7 @@ const EducationCard: React.FC<EducationCardProps> = ({ school }) => {
   const { isDark } = useContext(StyleContext);
   return (
     <div>
-      <Fade direction="left" duration={1000}>
+      <Fade triggerOnce direction="left" duration={1000}>
         <div className="education-card">
           <div className="education-card-left">
             <img
@@ -68,7 +68,7 @@ const EducationCard: React.FC<EducationCardProps> = ({ school }) => {
           </div>
         </div>
       </Fade>
-      <Slide direction="left" duration={2000}>
+      <Slide triggerOnce direction="left" duration={2000}>
         <div className="education-card-border"></div>
       </Slide>
     </div>
