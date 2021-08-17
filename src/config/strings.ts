@@ -174,8 +174,7 @@ const workExperiences = {
       companylogo: navyug,
       rgbColor: ["45", "86", "171"],
       date: "Jun 2017 – Dec 2017",
-      desc:
-        "Quickly learnt EmberJS and Ruby to develop features on companies product",
+      desc: "Quickly learn EmberJS and Ruby to develop features on a Product",
       descBullets: [
         "Learning the whole stack HTML/CSS/JavaScript/EmberJS/RoR",
         "Drawable Canvas for SME's to check marksheets",

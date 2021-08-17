@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
 import { Fade } from "react-awesome-reveal";
-import emoji from "react-easy-emoji";
 import "./Greeting.scss";
 import landingPerson from "../../assets/lottie/landingPerson.json";
-
 import manOnTable from "../../assets/images/manOnTable.svg";
 import DisplayLottie from "../DisplayLottie/DisplayLottie";
 import SocialMedia from "../../components/SocialMedia/SocialMedia";
@@ -26,8 +24,7 @@ const Greeting: React.FC = () => {
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
                 {" "}
-                {greeting.title}{" "}
-                <span className="wave-emoji">{"👋"}</span>
+                {greeting.title} <span className="wave-emoji">{"👋"}</span>
               </h1>
               <p
                 className={
@@ -60,6 +57,6 @@ const Greeting: React.FC = () => {
       </div>
     </Fade>
   );
-}
+};
 
-export default Greeting
+export default Greeting;

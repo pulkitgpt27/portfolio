@@ -1,7 +1,7 @@
 import React from "react";
 import "./Progress.scss";
 import { illustration, techStack } from "../../config/strings";
-import { Fade } from "react-awesome-reveal";
+import { Bounce } from "react-awesome-reveal";
 import Build from "../../assets/lottie/build.json";
 import DisplayLottie from "../DisplayLottie/DisplayLottie";
 import ProgressBar from "../ProgressBar/ProgressBar";
@@ -9,7 +9,7 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 const SkillProgress: React.FC = () => {
   if (techStack.viewSkillBars) {
     return (
-      <Fade direction={"down"} duration={1000}>
+      <Bounce duration={1000}>
         <div className="skills-container">
           <div className="skills-bar">
             <h1 className="skills-heading">Proficiency</h1>
@@ -37,7 +37,7 @@ const SkillProgress: React.FC = () => {
             )}
           </div>
         </div>
-      </Fade>
+      </Bounce>
     );
   }
   return null;

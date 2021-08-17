@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./StartupProjects.scss";
 import { bigProjects } from "../../config/strings";
-import { Fade } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
 const StartupProjects: React.FC = () => {
@@ -14,23 +14,21 @@ const StartupProjects: React.FC = () => {
     return null;
   }
   return (
-    <Fade direction="down" duration={1000}>
-      <div className="main" id="projects">
-        <div>
-          <h1 className="skills-heading">{bigProjects.title}</h1>
-          <p
-            className={
-              isDark
-                ? "dark-mode project-subtitle"
-                : "subTitle project-subtitle"
-            }
-          >
-            {bigProjects.subtitle}
-          </p>
+    <div className="main" id="projects">
+      <div>
+        <h1 className="skills-heading">{bigProjects.title}</h1>
+        <p
+          className={
+            isDark ? "dark-mode project-subtitle" : "subTitle project-subtitle"
+          }
+        >
+          {bigProjects.subtitle}
+        </p>
 
-          <div className="projects-container">
-            {bigProjects.projects.map((project, i) => {
-              return (
+        <div className="projects-container">
+          {bigProjects.projects.map((project, i) => {
+            return (
+              <Zoom key={i} duration={1000}>
                 <div
                   key={i}
                   className={
@@ -50,18 +48,8 @@ const StartupProjects: React.FC = () => {
                     </div>
                   ) : null}
                   <div className="project-detail">
-                    <h5
-                      className={isDark ? "dark-mode card-title" : "card-title"}
-                    >
-                      {project.projectName}
-                    </h5>
-                    <p
-                      className={
-                        isDark ? "dark-mode card-subtitle" : "card-subtitle"
-                      }
-                    >
-                      {project.projectDesc}
-                    </p>
+                    <h5 className={"card-title"}>{project.projectName}</h5>
+                    <p className={"card-subtitle"}>{project.projectDesc}</p>
                     {project.footerLink ? (
                       <div className="project-card-footer">
                         {project.footerLink.map((link, i) => {
@@ -81,12 +69,12 @@ const StartupProjects: React.FC = () => {
                     ) : null}
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </Zoom>
+            );
+          })}
         </div>
       </div>
-    </Fade>
+    </div>
   );
 };
 export default StartupProjects;

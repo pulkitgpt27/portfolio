@@ -51,7 +51,7 @@ const Header: React.FC = () => {
           )}
           {viewOpenSource && (
             <li>
-              <a href="#opensource">Open Source</a>
+              <a href="#projects">Projects</a>
             </li>
           )}
           {viewAchievement && (
