@@ -46,9 +46,9 @@ const Main: React.FC = () => {
           <Education />
           <WorkExperience />
           <StartupProjects />
+          <Contact />
           <Footer />
           <Top />
-          <Contact />
           {/* <LazyLoad>
             <Projects />
           </LazyLoad> */}

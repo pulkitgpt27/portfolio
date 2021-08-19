@@ -36,7 +36,6 @@ const StartupProjects: React.FC = () => {
                       ? "dark-mode project-card project-card-dark"
                       : "project-card project-card-light"
                   }
-                  onClick={() => openProjectInNewWindow(project.url)}
                 >
                   {project.image ? (
                     <div className="project-image">
@@ -51,7 +50,7 @@ const StartupProjects: React.FC = () => {
                   <div className="project-detail">
                     <h5 className={"card-title"}>{project.projectName}</h5>
                     <p className={"card-subtitle"}>{project.projectDesc}</p>
-                    {/* {project.footerLink ? (
+                    {project.footerLink ? (
                       <div className="project-card-footer">
                         {project.footerLink.map((link, i) => {
                           return (
@@ -67,7 +66,7 @@ const StartupProjects: React.FC = () => {
                           );
                         })}
                       </div>
-                    ) : null} */}
+                    ) : null}
                   </div>
                 </div>
               </Zoom>

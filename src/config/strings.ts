@@ -14,7 +14,7 @@ import kapalyagif from "../assets/images/kapalya.gif";
 import doprep from "../assets/images/doprep.png";
 
 const illustration = {
-  animated: true // set to false to use static SVG
+  animated: false // set to false to use static SVG
 };
 
 const greeting = {
@@ -112,7 +112,7 @@ const educationInfo = {
     {
       schoolName: "BPIT (IP University)",
       logo: ipu1,
-      subHeader: "Bachelor of technology in Computer Science",
+      subHeader: "Bachelor of Technology in Computer Science",
       duration: "Aug 2014 - July 2018",
       desc: "Percentage: 85%",
       descBullets: []
@@ -120,7 +120,7 @@ const educationInfo = {
     {
       schoolName: "Rosary Sen Secondary School",
       logo: rosary,
-      subHeader: "Bachelor of Science in Computer Science",
+      subHeader: "Senior Secondary",
       duration: "2012 - 2014",
       desc: "Percentage: 95%",
       descBullets: []
@@ -163,10 +163,10 @@ const workExperiences = {
       desc:
         "Reponsible for creating optimized and responsive web apps and PWA's as well as wrap it to Android/IOS/Ubuntu app",
       descBullets: [
+        "Implement Elasticsearch to reduce search query time by 50%",
         "Managed a team of 3 developers to deliver a military project before time",
         "Constant client interactions, Suggesting them the best solutions to a problem",
-        "Optimized Frontend/Backend/Network of a project",
-        "Implement Elasticsearch to reduce search query time by 50%"
+        "Optimized Frontend/Backend/Network of a project"
       ]
     },
     {
@@ -299,7 +299,7 @@ const achievementSection = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Blogs Section
@@ -324,7 +324,7 @@ const blogSection = {
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
@@ -343,7 +343,7 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section

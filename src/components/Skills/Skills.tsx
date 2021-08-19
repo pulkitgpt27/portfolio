@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./Skills.scss";
 import SoftwareSkills from "../SoftwareSkills/SoftwareSkills";
 import { illustration, skillsSection } from "../../config/strings";
+import developerActivity from "../../assets/images/developerActivity.svg";
 import { Fade } from "react-awesome-reveal";
 import codingPerson from "../../assets/lottie/codingPerson.json";
 import DisplayLottie from "../DisplayLottie/DisplayLottie";
@@ -20,10 +21,7 @@ const Skills: React.FC = () => {
             {illustration.animated ? (
               <DisplayLottie animationData={codingPerson} />
             ) : (
-              <img
-                alt="Man Working"
-                src={require("../../assets/images/developerActivity.svg")}
-              ></img>
+              <img alt="developer activity" src={developerActivity}></img>
             )}
           </div>
         </Fade>

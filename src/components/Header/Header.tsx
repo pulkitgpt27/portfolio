@@ -3,7 +3,6 @@ import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
-import { Fade } from "react-awesome-reveal";
 import {
   greeting,
   workExperiences,
@@ -23,16 +22,9 @@ const Header: React.FC = () => {
   const viewBlog = blogSection.display;
   const viewTalks = talkSection.display;
   const [count, setCount] = React.useState(0);
-  const [view, setView] = React.useState(false);
-  const remount = (inView: boolean, entry: IntersectionObserverEntry) => {
-    if (!inView && view) {
-      console.log("called");
-      setView(false);
-      setCount(count + 1);
-    }
-    if (inView && !view) {
-      setView(inView);
-    }
+
+  const onClick = () => {
+    setCount(count + 1);
   };
   return (
     <Headroom key={`${count}`}>
@@ -52,44 +44,42 @@ const Header: React.FC = () => {
         </label>
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
-            <li>
+            <li onClick={onClick}>
               <a href="#skills">Skills</a>
             </li>
           )}
           {viewExperience && (
-            <li>
+            <li onClick={onClick}>
               <a href="#experience">Work Experiences</a>
             </li>
           )}
           {viewOpenSource && (
-            <li>
+            <li onClick={onClick}>
               <a href="#projects">Projects</a>
             </li>
           )}
           {viewAchievement && (
-            <li>
+            <li onClick={onClick}>
               <a href="#achievements">Achievements</a>
             </li>
           )}
           {viewBlog && (
-            <li>
+            <li onClick={onClick}>
               <a href="#blogs">Blogs</a>
             </li>
           )}
           {viewTalks && (
-            <li>
+            <li onClick={onClick}>
               <a href="#talks">Talks</a>
             </li>
           )}
-          <li>
+          <li onClick={onClick}>
             <a href="#contact">Contact Me</a>
           </li>
           <li>
-            <Fade duration={0} onVisibilityChange={remount}>
-              <a>
-                <ToggleSwitch />
-              </a>
-            </Fade>
+            <a>
+              <ToggleSwitch />
+            </a>
           </li>
         </ul>
       </header>

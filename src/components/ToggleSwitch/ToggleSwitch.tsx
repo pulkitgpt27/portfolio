@@ -8,17 +8,29 @@ const ToggleSwitch: React.FC = () => {
   const styleContext = useContext(StyleContext);
 
   return (
-    <label className="switch">
-      <input
-        type="checkbox"
-        checked={isDark}
-        onChange={() => {
-          styleContext.changeTheme && styleContext.changeTheme();
-          setChecked(!isChecked);
-        }}
-      />
-      <span className="slider round" />
-    </label>
+    <div
+      className={
+        isDark
+          ? "dark-toggle toggle-switch-container"
+          : "toggle-switch-container"
+      }
+    >
+      <i className="themeIcon fas fa-adjust"></i>
+      <label className="switch">
+        <input
+          type="checkbox"
+          id="themeSwitch"
+          checked={isDark}
+          onChange={() => {
+            styleContext.changeTheme && styleContext.changeTheme();
+            setChecked(!isChecked);
+          }}
+        />
+        <>
+          <span className="slider round"></span>
+        </>
+      </label>
+    </div>
   );
 };
 export default ToggleSwitch;

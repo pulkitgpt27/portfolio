@@ -102,6 +102,14 @@
 }
 
 @media (max-width: 768px) {
+  .main {
+    margin-top: unset;
+  }
+
+  .greet-main {
+    padding: 0px 10px;
+  }
+
   .button-greeting-div {
     justify-content: space-around;
   }
@@ -115,6 +123,10 @@
     font-size: 16px;
     line-height: normal;
     text-align: center;
+  }
+
+  .greeting-image-div {
+    display: none;
   }
 
   .greeting-main {

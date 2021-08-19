@@ -2,6 +2,7 @@ import React from "react";
 import "./Progress.scss";
 import { illustration, techStack } from "../../config/strings";
 import { Bounce } from "react-awesome-reveal";
+import skills from "../../assets/images/skill.svg";
 import Build from "../../assets/lottie/build.json";
 import DisplayLottie from "../DisplayLottie/DisplayLottie";
 import ProgressBar from "../ProgressBar/ProgressBar";
@@ -30,10 +31,7 @@ const SkillProgress: React.FC = () => {
             {illustration.animated ? (
               <DisplayLottie animationData={Build} />
             ) : (
-              <img
-                alt="Skills"
-                src={require("../../assets/images/skill.svg")}
-              />
+              <img alt="Skills" src={skills} />
             )}
           </div>
         </div>
