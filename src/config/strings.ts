@@ -163,7 +163,7 @@ const workExperiences = {
       desc:
         "Reponsible for creating optimized and responsive web apps and PWA's as well as wrap it to Android/IOS/Ubuntu app",
       descBullets: [
-        "Implement Elasticsearch to reduce search query time by 50%",
+        "Implement Elasticsearch to reduce search query time by 90%",
         "Managed a team of 3 developers to deliver a military project before time",
         "Constant client interactions, Suggesting them the best solutions to a problem",
         "Optimized Frontend/Backend/Network of a project"
@@ -358,7 +358,7 @@ const podcastSection = {
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: "Contact Me ☎️",
   subtitle:
     "Discuss a project or just want to say hi. Want to create your portfolio? My Inbox is open for all",
   number: "+91-8527213450",

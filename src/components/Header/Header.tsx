@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
+import Typewriter from "typewriter-effect";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
 import {
   greeting,
+  educationInfo,
   workExperiences,
   skillsSection,
   openSource,
@@ -16,6 +18,7 @@ import {
 const Header: React.FC = () => {
   const { isDark } = useContext(StyleContext);
   const viewExperience = workExperiences.display;
+  const viewEducation = educationInfo.display;
   const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
   const viewAchievement = achievementSection.display;
@@ -29,9 +32,22 @@ const Header: React.FC = () => {
   return (
     <Headroom key={`${count}`}>
       <header className={isDark ? "dark-menu header" : "header"}>
-        <a href="/" className="logo">
+        <a className="logo">
           <span className="grey-color"> &lt;</span>
-          <span className="logo-name">{greeting.username}</span>
+          <span className="logo-name">
+            <Typewriter
+              options={{
+                strings: [
+                  "Pulkit Gupta",
+                  "Front End Developer",
+                  "Backend Developer",
+                  "Software Engineer"
+                ],
+                autoStart: true,
+                loop: true
+              }}
+            />
+          </span>
           <span className="grey-color">/&gt;</span>
         </a>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
@@ -50,12 +66,17 @@ const Header: React.FC = () => {
           )}
           {viewExperience && (
             <li onClick={onClick}>
-              <a href="#experience">Work Experiences</a>
+              <a href="#experience">Work</a>
             </li>
           )}
           {viewOpenSource && (
             <li onClick={onClick}>
               <a href="#projects">Projects</a>
+            </li>
+          )}
+          {viewEducation && (
+            <li onClick={onClick}>
+              <a href="#education">Education</a>
             </li>
           )}
           {viewAchievement && (

@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
     <Fade direction="down" duration={1000}>
       <div className="footer-div">
         <p className={isDark ? "dark-mode footer-text" : "footer-text"}>
-          {emoji("Made by Pulkit Gupta")}
+          © 2021 - Designed and Developed by Pulkit Gupta
         </p>
         <p className={isDark ? "dark-mode footer-text" : "footer-text"}></p>
       </div>
