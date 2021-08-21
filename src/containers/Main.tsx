@@ -43,9 +43,9 @@ const Main: React.FC = () => {
           <Greeting />
           <Skills />
           <SkillProgress />
-          <Education />
           <WorkExperience />
           <StartupProjects />
+          <Education />
           <Contact />
           <Footer />
           <Top />
