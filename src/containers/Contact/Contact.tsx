@@ -12,7 +12,7 @@ import StyleContext from "../../contexts/StyleContext";
 const Contact: React.FC = () => {
   const { isDark } = useContext(StyleContext);
   return (
-    <Fade direction="down" duration={1000}>
+    <Fade triggerOnce direction="down" duration={1000}>
       <div className="main contact-margin-top" id="contact">
         <div className="contact-div-main">
           <div className="contact-header">

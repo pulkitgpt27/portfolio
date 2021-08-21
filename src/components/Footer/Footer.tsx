@@ -7,14 +7,12 @@ import StyleContext from "../../contexts/StyleContext";
 const Footer: React.FC = () => {
   const { isDark } = useContext(StyleContext);
   return (
-    <Fade direction="down" duration={1000}>
-      <div className="footer-div">
-        <p className={isDark ? "dark-mode footer-text" : "footer-text"}>
-          © 2021 - Designed and Developed by Pulkit Gupta
-        </p>
-        <p className={isDark ? "dark-mode footer-text" : "footer-text"}></p>
-      </div>
-    </Fade>
+    <div className="footer-div">
+      <p className={isDark ? "dark-mode footer-text" : "footer-text"}>
+        © 2021 - Designed and Developed by Pulkit Gupta
+      </p>
+      <p className={isDark ? "dark-mode footer-text" : "footer-text"}></p>
+    </div>
   );
 };
 
