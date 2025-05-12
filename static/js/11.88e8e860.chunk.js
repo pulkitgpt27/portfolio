@@ -1,2 +1,0 @@
-(this.webpackJsonpportfolio=this.webpackJsonpportfolio||[]).push([[11],{157:function(e,t,o){},163:function(e,t,o){"use strict";o.r(t);var s=o(1),r=(o(157),o(4)),a=o(0);t.default=function(){var e=Object(s.useContext)(r.b).isDark;return Object(a.jsxs)("div",{className:"footer-div",children:[Object(a.jsx)("p",{className:e?"dark-mode footer-text":"footer-text",children:"\xa9 2021 - Designed and Developed by Pulkit Gupta"}),Object(a.jsx)("p",{className:e?"dark-mode footer-text":"footer-text"})]})}}}]);
-//# sourceMappingURL=11.88e8e860.chunk.js.map
