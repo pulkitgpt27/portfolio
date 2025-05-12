@@ -6,12 +6,29 @@
 import emoji from "react-easy-emoji";
 import ipu1 from "../assets/images/ipu1.png";
 import rosary from "../assets/images/rosary.png";
+import atlassianLogo from "../assets/images/atlassian.png";
 import logo from "../../src/logo.svg";
 import navyug from "../assets/images/navyug.png";
 import abh2 from "../assets/images/ABH2.jpeg";
 import kapalya from "../assets/images/kapalya.png";
-import kapalyagif from "../assets/images/kapalya.gif";
 import doprep from "../assets/images/doprep.png";
+
+function yearsSince(dateString: string): number {
+  const givenDate: Date = new Date(dateString);
+  const now: Date = new Date();
+
+  let years: number = now.getFullYear() - givenDate.getFullYear();
+
+  const hasNotCompletedYear: boolean =
+    now.getMonth() < givenDate.getMonth() ||
+    (now.getMonth() === givenDate.getMonth() && now.getDate() < givenDate.getDate());
+
+  if (hasNotCompletedYear) {
+    years--;
+  }
+
+  return years;
+}
 
 const illustration = {
   animated: false // set to false to use static SVG
@@ -20,11 +37,10 @@ const illustration = {
 const greeting = {
   username: "Pulkit Gupta",
   title: "Hi all, I'm Pulkit",
-  subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having 3 Years of experience in building Web and Mobile applications with JavaScript / Reactjs / Cordova / React Native (basic)/ Ruby On Rails and some other cool libraries and frameworks."
-  ),
+  subTitle: 
+    `A passionate Full Stack Software Developer 🚀 having ${yearsSince('2018-05-01')} Years of experience in building Web and Mobile applications with JavaScript / Reactjs / Cordova / React Native (basic)/ Ruby On Rails and some other cool libraries and frameworks.`,
   resumeLink:
-    "https://drive.google.com/file/d/120d_3EONnuDtutoZ3al1iHGuBstBT44s/view?usp=sharing",
+    "https://drive.google.com/file/d/1KxcXX9FoRgsSg8YGjXJLJguR49zGyT1g/view?usp=sharing",
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -40,20 +56,14 @@ const socialMediaLinks = {
   display: true // Set true to display this section, defaults to false
 };
 
-// Skills Section
 
+// Skills Section
 const skillsSection = {
   title: "My Tech Stack",
   subTitle:
     "FULL STACK DEVELOPER WHO AIMS AT BUILDING OPTIMIZED AND RESPONSIVE WEB APPS",
-  skills: [
-    emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
-    ),
-    emoji("⚡ Progressive Web Applications ( PWA )"),
-    emoji(
-      "⚡ Integration of third party services such as Microsoft/ AWS / Twilio"
-    )
+  skills: ["⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications","⚡ Progressive Web Applications ( PWA )",
+    "⚡ Integration of third party services such as Microsoft/ AWS / Twilio"
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -155,6 +165,19 @@ const workExperiences = {
   display: true, // Set it to true to show workExperiences Section
   experience: [
     {
+      role: "SDE - II",
+      company: "Atlassian",
+      companylogo: atlassianLogo,
+      rgbColor: ["24", "104", "219"],
+      date: "Nov 2021 – Present",
+      desc: "Responsible for developing features used by millions of users",
+      descBullets: [
+        "Migrated from Webpack to Parcel, improving development build times by 50%",
+        "Enabled multiple help centers, contributing to a 2.8% growth in premium customers and increased revenue impacting 1 million+ helpseekers.",
+        "Implemented dark mode in the UI through token modernization used by 80,000+ customers."
+      ]
+    },
+    {
       role: "Software Engineer",
       company: "Navyug",
       companylogo: navyug,
@@ -169,19 +192,6 @@ const workExperiences = {
         "Optimized Frontend/Backend/Network of a project"
       ]
     },
-    {
-      role: "Software Engineer Intern",
-      company: "Navyug",
-      companylogo: navyug,
-      rgbColor: ["45", "86", "171"],
-      date: "Jun 2017 – Dec 2017",
-      desc: "Quickly learn EmberJS and Ruby to develop features on a Product",
-      descBullets: [
-        "Learning the whole stack HTML/CSS/JavaScript/EmberJS/RoR",
-        "Drawable Canvas for SME's to check marksheets",
-        "Saving those marksheets in png form and render to frontend"
-      ]
-    }
   ]
 };
 
