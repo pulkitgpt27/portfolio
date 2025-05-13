@@ -12,6 +12,7 @@ import navyug from "../assets/images/navyug.png";
 import abh2 from "../assets/images/ABH2.jpeg";
 import kapalya from "../assets/images/kapalya.png";
 import doprep from "../assets/images/doprep.png";
+import jsmLogo from '../assets/images/jsm_logo.png'
 
 function yearsSince(dateString: string): number {
   const givenDate: Date = new Date(dateString);
@@ -210,14 +211,14 @@ const bigProjects = {
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
   projects: [
     {
-      image: abh2,
-      projectName: "A Billion Hopes",
-      projectDesc: "Crowd Funding Platform",
-      url: "https://abillionhopes.com/",
+      image: jsmLogo,
+      projectName: "Jira Service Management",
+      projectDesc: "IT Service Management",
+      url: "https://www.atlassian.com/software/jira/service-management/",
       footerLink: [
         {
           name: "Visit Website",
-          url: "https://abillionhopes.com/"
+          url: "https://www.atlassian.com/software/jira/service-management/"
         }
         //  you can add extra buttons here.
       ]
@@ -232,6 +233,19 @@ const bigProjects = {
           name: "Visit Website",
           url: "https://www.kapalya.com/"
         }
+      ]
+    },
+    {
+      image: abh2,
+      projectName: "A Billion Hopes",
+      projectDesc: "Crowd Funding Platform",
+      url: "https://abillionhopes.com/",
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "https://abillionhopes.com/"
+        }
+        //  you can add extra buttons here.
       ]
     },
     {
