@@ -41,7 +41,7 @@ const greeting = {
   subTitle: 
     `A passionate Full Stack Software Developer 🚀 having ${yearsSince('2018-05-01')} Years of experience in building Web and Mobile applications with JavaScript / Reactjs / Cordova / React Native (basic)/ Ruby On Rails and some other cool libraries and frameworks.`,
   resumeLink:
-    "https://drive.google.com/file/d/1KxcXX9FoRgsSg8YGjXJLJguR49zGyT1g/view?usp=sharing",
+    "https://drive.google.com/file/d/1nOimCVPvXeMpjjchVPa6B9AR7QNzJp9I/view?usp=drive_link",
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
